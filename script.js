@@ -17,7 +17,7 @@ window.addEventListener('load', ()=>{
                 console.log(data);
                 document.querySelector('.location__city').textContent = data.name;
                 document.querySelector('.temperature__degree').innerHTML = Math.floor(data.main.temp - 273) + '&deg';
-                console.log(document.querySelector('.location__icon').innerHTML = data.weather[0].icon);
+                document.querySelector('.location__icon').innerHTML = `<img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png">`
                 document.querySelector('.temperature__descrip').innerHTML = data.weather[0].description;
             })
         });
